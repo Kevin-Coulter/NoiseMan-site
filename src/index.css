@@ -4,17 +4,17 @@
   color-scheme: dark;
   --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
   --font-body: 'Work Sans', 'Segoe UI', sans-serif;
-  --bg: #0b0f14;
-  --bg-alt: #0f141d;
-  --surface: #141b28;
-  --surface-elev: #171f2e;
-  --border: rgba(255, 255, 255, 0.12);
-  --text: #f6f7fb;
-  --muted: #a6afc2;
-  --primary: #2bd4ff;
-  --primary-strong: #5dffb0;
-  --accent: #f3b560;
-  --shadow: 0 30px 80px rgba(6, 10, 18, 0.55);
+  --bg: #0b090c;
+  --bg-alt: #120f13;
+  --surface: #1b161b;
+  --surface-elev: #201a20;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f7f2f3;
+  --muted: #b3a7ad;
+  --primary: #cc3a74;
+  --primary-strong: #e8d08e;
+  --accent: #e39b63;
+  --shadow: 0 30px 80px rgba(6, 5, 8, 0.55);
   --radius: 18px;
   --radius-sm: 12px;
   --max-width: 1120px;
@@ -28,9 +28,9 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-body);
-  background: radial-gradient(1200px circle at 10% 10%, rgba(43, 212, 255, 0.12), transparent 60%),
-    radial-gradient(900px circle at 85% 20%, rgba(243, 181, 96, 0.12), transparent 50%),
-    linear-gradient(180deg, #090c12 0%, #0b0f14 100%);
+  background: radial-gradient(1200px circle at 10% 10%, rgba(204, 58, 116, 0.12), transparent 60%),
+    radial-gradient(900px circle at 85% 20%, rgba(232, 208, 142, 0.12), transparent 55%),
+    linear-gradient(180deg, #09070a 0%, #0b090c 100%);
   color: var(--text);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
