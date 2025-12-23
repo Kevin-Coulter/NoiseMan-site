@@ -118,39 +118,19 @@ function Landing() {
               Trial builds coming soon. Checkout is handled by Paddle.
             </p>
           </div>
-          <div className="hero-panel reveal" style={{ '--delay': '0.15s' }}>
+          <div className="hero-panel hero-panel-image reveal" style={{ '--delay': '0.15s' }}>
             <div className="panel-header">
-              <span className="panel-chip">Realtime Mode</span>
-              <span className="panel-title">NoiseMan Console</span>
+              <span className="panel-chip">UI Preview</span>
+              <span className="panel-title">NoiseMan Interface</span>
             </div>
-            <div className="panel-meter">
-              <div>
-                <p className="panel-label">Noise Floor</p>
-                <div className="meter-track">
-                  <span className="meter-fill" />
-                </div>
-              </div>
-              <div>
-                <p className="panel-label">Signal Detail</p>
-                <div className="meter-track">
-                  <span className="meter-fill alt" />
-                </div>
-              </div>
-            </div>
-            <div className="panel-stats">
-              <div>
-                <span>Reduction</span>
-                <strong>-24 dB</strong>
-              </div>
-              <div>
-                <span>Latency</span>
-                <strong>1.2 ms</strong>
-              </div>
-              <div>
-                <span>Profile</span>
-                <strong>Adaptive</strong>
-              </div>
-            </div>
+            <img
+              src="/noiseMan.png"
+              alt="NoiseMan noise reduction plugin interface preview"
+              loading="lazy"
+            />
+            <p className="panel-caption">
+              Adaptive reduction, quick controls, and low-latency monitoring.
+            </p>
           </div>
         </div>
       </section>
