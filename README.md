@@ -1,16 +1,36 @@
-# React + Vite
+﻿# NoiseMan Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, static landing site for the NoiseMan noise reduction plugin (VST3 + CLAP).
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Production build
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run build
+npm run preview
+```
 
-## Expanding the ESLint configuration
+## Environment variables
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Set the Paddle checkout URL so the Buy buttons are enabled:
+
+```bash
+VITE_PADDLE_CHECKOUT_URL="https://checkout.paddle.com/your-link"
+```
+
+You can place this in an `.env.local` file for local use.
+
+## Deployment
+
+- Netlify: build command `npm run build`, publish directory `dist`. The repo includes a `public/_redirects` file for SPA routing.
+- GitHub Pages: set the `base` in `vite.config.js` if deploying under a subpath, then deploy the `dist` folder. Configure a SPA fallback (404 redirect) if you need direct deep links like `/privacy`.
+
+## Contact placeholder
+
+Update `support@YOURDOMAIN.com` to your real support email before publishing.

@@ -1,0 +1,25 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f15" />
+      <stop offset="100%" stop-color="#111a26" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2bd4ff" />
+      <stop offset="100%" stop-color="#5dffb0" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="220" cy="140" r="180" fill="#163045" opacity="0.6" />
+  <circle cx="980" cy="80" r="220" fill="#2b4c3a" opacity="0.35" />
+  <rect x="80" y="120" width="1040" height="390" rx="28" fill="#141f2d" stroke="#243449" />
+  <text x="140" y="250" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="72" fill="url(#accent)">
+    NoiseMan
+  </text>
+  <text x="140" y="320" font-family="Work Sans, Segoe UI, sans-serif" font-size="32" fill="#c5cfdd">
+    Noise reduction plugin for VST3 &amp; CLAP
+  </text>
+  <text x="140" y="380" font-family="Work Sans, Segoe UI, sans-serif" font-size="22" fill="#8f9bb2">
+    Clean recordings. Fast workflows. Built for modern DAWs.
+  </text>
+</svg>
