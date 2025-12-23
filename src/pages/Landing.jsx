@@ -41,6 +41,52 @@ const steps = [
   },
 ]
 
+const algorithms = [
+  {
+    title: 'Algorithm 1: Bypass',
+    summary: 'No processing. Clean signal passes through unchanged.',
+    bullets: ['Use for A/B checks and gain staging.', 'Zero reduction, zero artifacts.'],
+  },
+  {
+    title: 'Algorithm 2: Spectral Subtraction',
+    summary:
+      'Magnitude-based subtraction using a learned noise profile in the FFT domain.',
+    formula: [
+      '|S_hat(w)|^2 = |Y(w)|^2 - alpha * |N(w)|^2',
+      'alpha = 1.0 + reduction * 4.0',
+    ],
+    pipeline: [
+      'Profile: capture a short noise-only slice.',
+      'Analysis: FFT to get complex bins.',
+      'Deduction: subtract alpha * noise power.',
+      'Floor: apply a spectral floor (beta).',
+      'Synthesis: IFFT using original phase.',
+    ],
+    notes: [
+      'Phase is preserved; only magnitudes are reduced.',
+      'Spectral floor + gain smoothing reduce musical noise.',
+    ],
+  },
+  {
+    title: 'Algorithm 3: Wiener Filter',
+    summary: 'Gain-based attenuation using a learned noise profile.',
+    formula: [
+      'G(w) = P_S(w) / (P_S(w) + P_N(w))',
+      'G = SNR / (SNR + 1)',
+    ],
+    pipeline: [
+      'Analysis: FFT to get complex bins.',
+      'Estimation: use the noise profile to estimate P_N.',
+      'Filtering: apply the Wiener gain per bin.',
+      'Synthesis: IFFT + overlap-add.',
+    ],
+    notes: [
+      'Smoother than subtraction because it scales bins instead of cutting.',
+      'Typically lower musical-noise artifacts.',
+    ],
+  },
+]
+
 const compatibility = [
   {
     title: 'Formats',
@@ -214,6 +260,55 @@ function Landing() {
                 <span className="card-step">0{index + 1}</span>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="algorithms">
+        <div className="container">
+          <div className="section-heading">
+            <h2>Algorithms</h2>
+            <p>Three processing modes with predictable DSP behavior.</p>
+          </div>
+          <div className="algo-grid">
+            {algorithms.map((algo) => (
+              <article className="card algo-card" key={algo.title}>
+                <h3>{algo.title}</h3>
+                <p>{algo.summary}</p>
+                {algo.bullets && (
+                  <ul className="compact-list">
+                    {algo.bullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+                {algo.formula && (
+                  <pre className="math-block">
+                    {algo.formula.join('\n')}
+                  </pre>
+                )}
+                {algo.pipeline && (
+                  <div className="algo-steps">
+                    <p className="algo-label">Pipeline</p>
+                    <ul className="compact-list">
+                      {algo.pipeline.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {algo.notes && (
+                  <div className="algo-steps">
+                    <p className="algo-label">Notes</p>
+                    <ul className="compact-list">
+                      {algo.notes.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </article>
             ))}
           </div>

@@ -16,6 +16,7 @@ function App() {
           <nav className="nav-links">
             <a href="/#overview">Overview</a>
             <a href="/#how">How it Works</a>
+            <a href="/#algorithms">Algorithms</a>
             <a href="/#formats">Formats</a>
             <a href="/#pricing">Pricing</a>
             <a href="/#faq">FAQ</a>
