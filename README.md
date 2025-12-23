@@ -16,6 +16,8 @@ npm run build
 npm run preview
 ```
 
+`npm run build` generates `dist` and also syncs the built site to the repo root for GitHub Pages branch deployments.
+
 ## Environment variables
 
 Set the Paddle checkout URL so the Buy buttons are enabled:
@@ -31,7 +33,7 @@ For GitHub Pages, add `VITE_PADDLE_CHECKOUT_URL` as a repository variable and th
 
 - Netlify: build command `npm run build`, publish directory `dist`. The repo includes a `public/_redirects` file for SPA routing.
 - GitHub Pages (recommended): this repo includes a workflow at `.github/workflows/deploy.yml`. In GitHub settings, set Pages Source to `GitHub Actions`. The build output includes `public/CNAME` and `public/404.html` for custom domains and SPA routing.
-- GitHub Pages (manual): deploy the `dist` folder. Set `base` in `vite.config.js` if deploying under a subpath.
+- GitHub Pages (branch root): after running `npm run build`, commit the generated root `index.html` and `assets` folder, then set Pages Source to `main` and `/root`.
 
 ## Contact placeholder
 
