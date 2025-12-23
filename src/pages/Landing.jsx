@@ -123,11 +123,13 @@ function Landing() {
               <span className="panel-chip">UI Preview</span>
               <span className="panel-title">NoiseMan Interface</span>
             </div>
-            <img
-              src="/noiseMan.png"
-              alt="NoiseMan noise reduction plugin interface preview"
-              loading="lazy"
-            />
+            <div className="hero-image-frame">
+              <img
+                src="/noiseMan.png"
+                alt="NoiseMan noise reduction plugin interface preview"
+                loading="lazy"
+              />
+            </div>
             <p className="panel-caption">
               Adaptive reduction, quick controls, and low-latency monitoring.
             </p>
