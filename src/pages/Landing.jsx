@@ -163,7 +163,7 @@ function Landing() {
           <div className="hero-content">
             <p className="eyebrow reveal">Noise reduction plugin for VST3 & CLAP.</p>
             <h1 className="hero-title reveal" style={{ '--delay': '0.05s' }}>
-              NoiseMan: real-time noise reduction, no black box.
+              NoiseMan
             </h1>
             <p className="hero-subtitle reveal" style={{ '--delay': '0.1s' }}>
               Clean up hiss, hum, and room tone without chasing artifacts. Classical DSP,
@@ -179,7 +179,7 @@ function Landing() {
               </button>
             </div>
             <p className="fine-print reveal" style={{ '--delay': '0.25s' }}>
-              No black boxes. No one-knob magic. Checkout is handled by Paddle.
+              No black boxes. No one-knob magic. Checkout is handled by FastSpring.
             </p>
           </div>
           <div className="hero-panel hero-panel-image reveal" style={{ '--delay': '0.15s' }}>
@@ -355,6 +355,9 @@ function Landing() {
               <li>macOS and Linux planned</li>
             </ul>
             <BuyButton className="pricing-cta" />
+          </div>
+          <div className="checkout-embed">
+            <div id="fsc-embedded-checkout-container"></div>
           </div>
         </div>
       </section>

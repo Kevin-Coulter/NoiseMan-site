@@ -352,6 +352,15 @@
   box-shadow: var(--shadow);
 }
 
+.checkout-embed {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  min-height: 420px;
+}
+
 .tech-note {
   margin-bottom: 2rem;
   background: var(--surface);

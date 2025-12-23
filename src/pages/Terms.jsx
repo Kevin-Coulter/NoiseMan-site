@@ -29,8 +29,8 @@
 
           <h2>Payments and refunds</h2>
           <p>
-            Checkout and refund processing are handled by Paddle. Refund eligibility follows
-            Paddle policies.
+            Checkout and refund processing are handled by FastSpring. Refund eligibility follows
+            FastSpring policies.
           </p>
 
           <h2>Warranty disclaimer</h2>

@@ -20,10 +20,10 @@ npm run preview
 
 ## Environment variables
 
-Set the Paddle checkout URL so the Buy buttons are enabled:
+Set the checkout URL (FastSpring) so the Buy buttons are enabled:
 
 ```bash
-VITE_PADDLE_CHECKOUT_URL="https://checkout.paddle.com/your-link"
+VITE_PADDLE_CHECKOUT_URL="https://noiseman.test.onfastspring.com/noisemanstudios"
 ```
 
 You can place this in an `.env.local` file for local use.

@@ -17,7 +17,7 @@
           <h2>Information we collect</h2>
           <ul>
             <li>Support emails and any details you provide when contacting support.</li>
-            <li>Purchase and license confirmation data provided to us by Paddle.</li>
+            <li>Purchase and license confirmation data provided to us by FastSpring.</li>
             <li>Optional anonymous analytics if enabled in the app settings.</li>
             <li>Optional crash reports if you choose to share them.</li>
           </ul>
@@ -29,10 +29,10 @@
             <li>Improve product quality, stability, and performance.</li>
           </ul>
 
-          <h2>Purchases and Paddle</h2>
+          <h2>Purchases and FastSpring</h2>
           <p>
-            All payments and refunds are processed by Paddle. Paddle may collect billing details
-            and payment information according to their own privacy policies. We receive limited
+            All payments and refunds are processed by FastSpring. FastSpring may collect billing
+            details and payment information according to their own privacy policies. We receive limited
             order metadata such as transaction IDs and license status.
           </p>
 
