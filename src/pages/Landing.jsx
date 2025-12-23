@@ -345,8 +345,8 @@ function Landing() {
           <div className="pricing-card reveal">
             <div>
               <p className="pricing-title">NoiseMan (Full)</p>
-              <p className="pricing-price">[PRICE: $24.99]</p>
-              <p className="pricing-note">Pricing will be published at release.</p>
+              <p className="pricing-price">$24.99</p>
+              <p className="pricing-note">One-time purchase.</p>
             </div>
             <ul className="compact-list">
               <li>Full version paid</li>

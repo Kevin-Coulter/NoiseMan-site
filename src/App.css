@@ -128,10 +128,12 @@
 .hero-title {
   font-size: clamp(2.8rem, 4vw, 4.4rem);
   margin-bottom: 1rem;
+  text-wrap: balance;
 }
 
 .hero-subtitle {
   font-size: 1.1rem;
+  text-wrap: pretty;
 }
 
 .hero-meta {
