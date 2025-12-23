@@ -250,6 +250,25 @@
   color: var(--text);
 }
 
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.overview-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.6rem;
+}
+
+.overview-block h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -293,6 +312,24 @@
   border: 1px solid rgba(232, 208, 142, 0.25);
   background: linear-gradient(160deg, rgba(28, 22, 28, 0.95), rgba(14, 11, 15, 0.92));
   box-shadow: var(--shadow);
+}
+
+.tech-note {
+  margin-bottom: 2rem;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  padding: 1rem 1.2rem;
+}
+
+.tech-note summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tech-note p {
+  margin-top: 0.75rem;
 }
 
 .pricing-title {

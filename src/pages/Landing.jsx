@@ -1,27 +1,43 @@
 ﻿import BuyButton from '../components/BuyButton.jsx'
 
-const featureBullets = [
-  'Targeted spectral reduction for dialogue, vocals, and ambience.',
-  'Adaptive noise profile that reacts to changing rooms and gear.',
-  'Low latency monitoring mode for tracking and streaming.',
-  'Transparent smoothing to keep transients and room tone intact.',
+const whatItDoes = [
+  'Reduces steady and semi-steady noise in real time.',
+  'Preserves transients with adjustable reduction and smoothing.',
+  'Shows signal and reduction behavior with live visuals.',
+]
+
+const whyDifferent = [
+  'Deterministic DSP. No neural nets or hidden heuristics.',
+  'You capture the noise profile; the plugin follows your reference.',
+  'Predictable artifacts with clear controls under automation.',
+  'FFT-domain reduction with adjustable curve and smoothing.',
+  'Built for real-time inserts, not offline renders.',
+]
+
+const useCases = [
+  'Dialogue cleanup for podcasts and video.',
+  'Room tone reduction on vocal takes.',
+  'Guitar and amp noise control between phrases.',
+  'Live streaming noise management.',
+  'Bus-level cleanup for steady noise in stems.',
+  'Cleanup for synths or samplers with persistent hiss.',
 ]
 
 const steps = [
   {
-    title: 'Capture the noise floor',
+    title: 'Capture the noise',
     description:
-      'Sample a short slice of room noise or let the auto profile listen in real time.',
+      'Learn a short slice of noise so the plugin has a clear reference.',
   },
   {
-    title: 'Reduce with intent',
+    title: 'Set reduction',
     description:
-      'Dial in reduction, threshold, and sensitivity while the plugin preserves clarity.',
+      'Adjust reduction and smoothing to balance cleanup with natural tone.',
   },
   {
-    title: 'Finalize the tone',
+    title: 'Shape the curve',
     description:
-      'Shape the remaining ambience with the smoothness and detail controls.',
+      'Tune the spectral curve to keep transients intact and artifacts predictable.',
   },
 ]
 
@@ -41,48 +57,55 @@ const compatibility = [
       'Should work: Ableton Live, FL Studio, Studio One, Cubase, Bitwig',
     ],
   },
+  {
+    title: 'Specs',
+    details: [
+      'Latency: [LATENCY: fill in]',
+      'CPU: [CPU: fill in]',
+      'Stage: Early beta / active development',
+    ],
+  },
 ]
 
 const faqs = [
   {
-    question: 'What is NoiseMan?',
+    question: 'What is the latency?',
     answer:
-      'NoiseMan is a noise reduction plugin for VST3 & CLAP that removes consistent background noise while keeping your signal natural.',
+      'Latency is set by FFT size and windowing. It is low but non-zero. [LATENCY: fill in]',
   },
   {
-    question: 'Is there a free trial?',
+    question: 'Will it add artifacts?',
     answer:
-      'Trial builds are planned. Use the Download Trial button to check back for availability.',
+      'All spectral reduction can leave artifacts. NoiseMan makes them predictable and controllable through reduction and smoothing.',
   },
   {
-    question: 'Does it work in Reaper?',
+    question: 'How does Learn Noise work?',
     answer:
-      'Yes. Reaper is tested. Other modern DAWs should work when they support VST3 or CLAP.',
+      'Capture a short slice of noise from the input. That profile becomes the reference for reduction.',
   },
   {
-    question: 'Is an internet connection required?',
+    question: 'Is it for music or voice?',
     answer:
-      'No. The plugin runs locally. Internet is only needed if you choose to check for updates.',
+      'Both. It targets steady and semi-steady noise, so it works on vocals, dialogue, instruments, and room tone.',
+  },
+  {
+    question: 'Is there a trial?',
+    answer:
+      'A Lite version is planned with limited controls or quality caps. The full version is paid.',
   },
   {
     question: 'How does licensing work?',
     answer:
-      'Each purchase grants a license for a single user. Your checkout and license delivery are handled by Paddle.',
+      'License details are provided at checkout and in the Terms/EULA.',
   },
   {
-    question: 'What is the refund policy?',
-    answer:
-      'Refunds are handled directly by Paddle according to their policies.',
+    question: 'What formats are supported?',
+    answer: 'VST3 and CLAP.',
   },
   {
-    question: 'Does it support macOS or Linux?',
+    question: 'What DAWs are compatible?',
     answer:
-      'Support for macOS and Linux is planned, but only Windows 10/11 is supported today.',
-  },
-  {
-    question: 'How are updates delivered?',
-    answer:
-      'Updates are provided as new installers and version notes on the product page.',
+      'NoiseMan runs on Windows in any DAW that supports VST3 or CLAP. macOS and Linux are planned.',
   },
 ]
 
@@ -94,28 +117,23 @@ function Landing() {
           <div className="hero-content">
             <p className="eyebrow reveal">Noise reduction plugin for VST3 & CLAP.</p>
             <h1 className="hero-title reveal" style={{ '--delay': '0.05s' }}>
-              NoiseMan
+              NoiseMan: real-time noise reduction, no black box.
             </h1>
             <p className="hero-subtitle reveal" style={{ '--delay': '0.1s' }}>
-              Remove hiss, room noise, and fans without dulling the performance. A modern
-              reduction tool built for today's sessions.
+              Clean up hiss, hum, and room tone without chasing artifacts. Classical DSP,
+              explicit noise learning, and predictable controls for VST3 + CLAP.
             </p>
             <p className="hero-meta reveal" style={{ '--delay': '0.15s' }}>
               Developed by Kevin Coulter.
             </p>
             <div className="cta-row reveal" style={{ '--delay': '0.2s' }}>
               <BuyButton />
-              <button
-                className="btn btn-secondary"
-                type="button"
-                disabled
-                title="Trial builds coming soon"
-              >
-                Download Trial
+              <button className="btn btn-secondary" type="button" disabled title="Lite planned">
+                Download Lite (planned)
               </button>
             </div>
             <p className="fine-print reveal" style={{ '--delay': '0.25s' }}>
-              Trial builds coming soon. Checkout is handled by Paddle.
+              No black boxes. No one-knob magic. Checkout is handled by Paddle.
             </p>
           </div>
           <div className="hero-panel hero-panel-image reveal" style={{ '--delay': '0.15s' }}>
@@ -140,20 +158,37 @@ function Landing() {
       <section className="section" id="overview">
         <div className="container">
           <div className="section-heading">
-            <h2>Overview</h2>
+            <h2>What it does</h2>
             <p>
-              NoiseMan is designed for creators who need clean audio fast. Use it on vocals,
-              podcasts, streams, or full mixes to keep noise under control without killing the
-              life in the performance.
+              NoiseMan reduces steady and semi-steady background noise in real time, with
+              controls that keep the cleanup musical and predictable.
             </p>
           </div>
           <ul className="feature-list">
-            {featureBullets.map((item, index) => (
+            {whatItDoes.map((item, index) => (
               <li className="reveal" style={{ '--delay': `${index * 0.05}s` }} key={item}>
                 {item}
               </li>
             ))}
           </ul>
+          <div className="overview-grid">
+            <div className="overview-block">
+              <h3>Why it is different</h3>
+              <ul className="compact-list">
+                {whyDifferent.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="overview-block">
+              <h3>Use cases</h3>
+              <ul className="compact-list">
+                {useCases.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -161,8 +196,18 @@ function Landing() {
         <div className="container">
           <div className="section-heading">
             <h2>How it works</h2>
-            <p>Three quick steps to a cleaner signal.</p>
+            <p>
+              Capture a noise profile, then reduce matching content in real time. You control
+              reduction strength, smoothing, and the curve so the artifacts stay predictable.
+            </p>
           </div>
+          <details className="tech-note">
+            <summary>Tech note</summary>
+            <p>
+              FFT-domain analysis with learned noise profiles, spectral reduction, smoothing,
+              and adjustable reduction curves. Deterministic processing with no neural nets.
+            </p>
+          </details>
           <div className="card-grid">
             {steps.map((step, index) => (
               <article className="card reveal" style={{ '--delay': `${index * 0.08}s` }} key={step.title}>
@@ -179,7 +224,7 @@ function Landing() {
         <div className="container">
           <div className="section-heading">
             <h2>Formats & compatibility</h2>
-            <p>Ready for modern DAWs and future-proof workflows.</p>
+            <p>VST3 and CLAP support with clear, published specs.</p>
           </div>
           <div className="card-grid">
             {compatibility.map((item) => (
@@ -200,19 +245,19 @@ function Landing() {
         <div className="container">
           <div className="section-heading">
             <h2>Pricing</h2>
-            <p>Simple, one-time license with checkout handled by Paddle.</p>
+            <p>Full version paid. Lite version planned.</p>
           </div>
           <div className="pricing-card reveal">
             <div>
-              <p className="pricing-title">NoiseMan License</p>
-              <p className="pricing-price">$79</p>
-              <p className="pricing-note">One-time purchase. Delivered instantly.</p>
+              <p className="pricing-title">NoiseMan (Full)</p>
+              <p className="pricing-price">[PRICE: $24.99]</p>
+              <p className="pricing-note">Pricing will be published at release.</p>
             </div>
             <ul className="compact-list">
-              <li>One user license</li>
+              <li>Full version paid</li>
               <li>VST3 + CLAP formats</li>
               <li>Windows 10/11 support</li>
-              <li>Free updates for the current major version</li>
+              <li>macOS and Linux planned</li>
             </ul>
             <BuyButton className="pricing-cta" />
           </div>
