@@ -29,8 +29,7 @@
 
           <h2>Payments and refunds</h2>
           <p>
-            Checkout and refund processing are handled by FastSpring. Refund eligibility follows
-            FastSpring policies.
+              All sales are final. No refunds are offered.
           </p>
 
           <h2>Warranty disclaimer</h2>
